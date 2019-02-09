@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Survey Form Project</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="Freecodecamp Survey Form Project">
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript, freecodecamp">
+		<meta name="author" content="Liana George">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+
+		<style>
+			html,body{
+				background-image:radial-gradient(circle,pink,turquoise,pink);
+			}
+
+			h1{
+				margin:5px auto 0 auto;
+				width:500px;
+				text-align: center;
+				font-family:Pacifico, cursive;
+				font-weight:700;
+				letter-spacing:2.5px;
+			}
+
+			p{
+				margin:0 auto;
+				width:500px;
+				text-align:center;
+				font-family: Open Sans Condensed, sans-serif;
+				font-size:22px;
+				font-weight:300;
+			}
+
+			main{
+				display:grid;
+				width:900px;
+				padding:10px;
+				margin:10px auto;
+				border-radius:20px;
+				grid-template-columns:auto;
+				background-color:#fbfbfb;
+				grid-template-areas:
+				". form .";
+				font-family:Open Sans Condensed, sans-serif;
+				font-size:18px;
+			}
+
+			form{
+				justify-self:center;
+				grid-area:form;
+			}
+
+			#name{
+				padding:5px;
+				margin:10px 10px 10px 0;
+			}
+
+			#email{
+				padding:5px;
+				margin:10px 10px 10px 0;
+			}
+
+			#number{
+				padding:5px;
+				margin:10px 10px 10px 0;
+				width:150px;
+			}
+
+			select{
+				padding:5px;
+				margin:10px 10px 10px 0;
+			}
+
+			fieldset{
+				padding:5px;
+				margin:10px 10px 10px 0;
+			}
+
+			#reset{
+				padding:5px;
+				margin:10px 10px 10px 0;
+				font-family:Open Sans Condensed, sans-serif;
+				font-weight:700;
+			}
+
+			#submit{
+				padding:5px;
+				margin:10px 10px 10px 0;
+				font-family:Open Sans Condensed, sans-serif;
+				font-weight:700;
+			}
+
+			footer{
+				width:500px;
+				margin:-5px auto 0 auto;
+				text-align:center;
+				font-family: Pacifico, cursive;
+				font-size:17px;
+				letter-spacing:1px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<h1 id="title">Developer Survey Form</h1>
+			<p id="description">Please Help Contribute to Our Statistics</p>
+		</header>
+		<main>
+			<form id="survey-form">
+				<label id="name-label">*Name:</label>
+				<input id="name" placeholder="Enter your name" required><br>
+
+				<label id="email-label">*Email:</label>
+				<input type="email" id="email" placeholder="Enter your email" required><br>
+
+				<label id="number-label">*Age:</label>
+				<input type="number" id="number" placeholder="Enter a number" min="1" max="200" required><br>
+
+				<label id="dropdown-label">*Industry Interest:</label>
+				<select id ="dropdown">
+	            	<option value = "web design">Web Design</option>
+	            	<option value = "software development">Software Development</option>
+	            	<option value = "AI">Artificial Intelligence</option>
+	            	<option value = "game development">Game Development</option>
+	            </select><br>
+
+	            <label>*Skill Level:</label>
+		            <fieldset>
+			            <input type="radio" id="entry-level" name="skill" value="entry-level">
+			            <label for="entry-level">Entry-Level</label><br>
+			            <input type="radio" id="junior" name="skill" value="junior">
+			            <label for="junior">Junior Developer</label><br>
+			            <input type="radio" id="developer" name="skill" value="developer">
+			            <label for="developer">Developer</label><br>
+			            <input type="radio" id="senior" name="skill" value="senior">
+			            <label for="senior">Senior Developer</label><br>
+			        </fieldset>
+
+			    <label>*Years of Experience:</label>
+			    	<fieldset>
+			    		<input type="checkbox" id="five" name="experience" value="0-5">
+			    		<label for="five">0-5</label><br>
+			    		<input type="checkbox" id="eight" name="experience" value="6-8">
+			    		<label for="cat">6-8</label><br>
+			    		<input type="checkbox" id="nine" name="experience" value="9+">
+			    		<label for="bird">9+</label>
+			    	</fieldset>
+
+			    <label>*Comments:</label><br>
+			    <textarea id="textarea"></textarea><br>
+			    <input type="reset" id="reset">
+			    <input type="submit" id="submit">
+			</form>
+		</main>
+		<footer id="footer">Made by Liana G. <i class="fas fa-hand-peace"></i></footer>
+
+		<!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+	</body>
+</html>
